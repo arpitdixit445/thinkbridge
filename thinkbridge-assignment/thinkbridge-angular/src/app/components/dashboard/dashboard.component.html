@@ -1,0 +1,7 @@
+<div class="nav">
+    <h1>Dashboard <button class="add-button" (click)="addRest()">+ Add Restaurant</button></h1>
+    <h1 class="username">{{username}}</h1>
+</div>
+<div class="restaurant-container">
+    <app-restaurant *ngFor="let rest of restaurants" [restaurantData]="rest"></app-restaurant>
+</div>

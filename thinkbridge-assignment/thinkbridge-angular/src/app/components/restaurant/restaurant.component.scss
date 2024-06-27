@@ -1,0 +1,103 @@
+.rest-con{
+    height: 300px;
+    width: 300px;
+    border: 1px solid rgb(176, 176, 176);
+    border-radius: 5px;
+    overflow: scroll;
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 30px 0px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    overflow: hidden;
+
+
+    h1{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+    margin: 4px 0px;
+    margin-bottom: 0px;
+    }
+
+
+.bob{
+    height: 20px;
+    color: rgb(6, 111, 6);
+    background-color: rgb(223, 255, 223);
+    font-size: 12px;
+    padding: 2px 15px;
+    font-weight: 600;
+    border-radius: 3px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuisine{
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0px;
+    color: rgb(143, 143, 143);
+}
+
+.division{
+    display: inline-block;
+    width: 60%;
+    height: 2px;
+    background-color: rgb(202, 202, 202);
+}
+
+}
+
+.dishes-container{
+    height: 100px;
+    width: 100%;
+    box-shadow: inset 0px 0px 2px 0px;
+    border-radius: 6px;
+    background-color: rgb(248, 248, 248);
+    border: 0.5px solid rgb(210, 210, 210);
+    overflow: scroll;
+    padding: 6px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.dish{
+    background-color: rgb(209, 209, 209);
+    display: inline-block;
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.edit-button {
+    font-family: inherit;
+    background-color: white;
+    font-weight: 700;
+    color: black;
+    border-radius: 4px;
+    height: 30px;
+    width: 50px;
+    outline: none;
+    cursor: pointer;
+    border: 0.5px solid black;
+}
+
+.bar{
+
+    text-decoration: underline;
+    color: rgb(43, 0, 43);
+}

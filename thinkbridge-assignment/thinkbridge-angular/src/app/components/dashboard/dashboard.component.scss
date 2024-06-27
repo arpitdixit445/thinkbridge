@@ -1,0 +1,57 @@
+.nav{
+    
+    height: 65px;
+    display: flex;
+    margin: 0px;
+    box-shadow: black 0px 0.1px 4px;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: white;
+}
+
+h1{
+    font-family: "Playwrite US Trad", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    margin: 0px 20px;
+    font-size: 25px;
+    color: #31b5ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-button{
+    margin-left: 30px;
+    height: 35px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.username{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+}
+
+.restaurant-container{
+    padding: 30px;
+    margin-top: 65px;
+    z-index: -10;
+    // background-color: gray;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}

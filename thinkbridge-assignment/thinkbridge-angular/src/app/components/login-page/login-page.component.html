@@ -1,0 +1,33 @@
+<div class="outer-login-container">
+    <div class="left-image">
+        <img src="../../../assets/images/clipart4355345.png">
+        <h1>Food Delight</h1>
+        <div class="vertical"></div>
+    </div>
+    <div class="right-form-container">
+        <form *ngIf="pageType" [formGroup]="loginForm" class="inner-container" (ngSubmit)="onLogin()">
+            <h1 class="login-text">Log into your account</h1>
+            <input type="text" spellcheck="false" formControlName="username"  placeholder="username">
+            <span class="error" *ngIf="checkErrors('username',loginForm)">{{displayError('username',loginForm)}}</span>
+            <input type="password" formControlName="password" placeholder="password">
+            <span class="error" *ngIf="checkErrors('password',loginForm)">{{displayError('password',loginForm)}}</span>
+            <button type="submit" [disabled]="loginForm.invalid" [ngStyle]="{'background-color': loginForm.invalid ? 'rgb(155, 155, 155)' : '#31b5ff'}">Login</button>
+            <span class="register" (click)="switchPage()">or sign in to create a new account</span>
+        </form>
+    <form [formGroup]="registerForm" (ngSubmit)="onRegister()" *ngIf="!pageType" class="inner-container register">
+        <h1 class="login-text">Create a new account</h1>
+        <input type="text" formControlName="firstname" placeholder="First Name">
+        <span class="error" *ngIf="checkErrors('firstname',registerForm)">{{displayError('firstname',registerForm)}}</span>
+        <input type="text" formControlName="lastname" placeholder="Last Name">
+        <span class="error" *ngIf="checkErrors('lastname',registerForm)">{{displayError('lastname',registerForm)}}</span>
+        <input type="text" formControlName="username" placeholder="username">
+        <span class="error" *ngIf="checkErrors('username',registerForm)">{{displayError('username',registerForm)}}</span>
+        <input type="password" formControlName="password" placeholder="password">
+        <span class="error" *ngIf="checkErrors('password',registerForm)">{{displayError('password',registerForm)}}</span>
+        <input type="password" formControlName="repassword" placeholder="re-enter password">
+        <span class="error" *ngIf="!registerForm.controls['repassword'].pristine && registerForm.controls['password'].value != registerForm.controls['repassword'].value">password does not match</span>
+        <button [disabled]="registerForm.invalid || registerForm.controls['password'].value != registerForm.controls['repassword'].value" [ngStyle]="{'background-color': (registerForm.invalid || registerForm.controls['password'].value != registerForm.controls['repassword'].value) ? 'rgb(155, 155, 155)' : '#31b5ff'}">Sign In</button>
+        <span class="register" (click)="switchPage()">or log into your existing account</span>
+    </form>
+</div>
+</div>

@@ -1,0 +1,53 @@
+<div class="add-rest-cont">
+    <button class="back-button" (click)="back()" title="Go back">←</button>
+    <h1 style="position: absolute; top: 10px;">Add Restaurant</h1>
+    <form [formGroup]="addForm" (ngSubmit)="onAdd()" class="form-cont">
+        <div style="display: flex;justify-content: space-between; width: 60%;">
+            <div style="display: flex;flex-direction: column;">
+                <input class="text-input" type="text" spellcheck="false" formControlName="name"  placeholder="Restaurant Name">
+                <span class="error" *ngIf="checkErrors('name',addForm)">Restaurant Name can not be Empty</span>
+            </div>
+
+            <div style="display: flex;flex-direction: column;">
+            <input class="text-input" type="text" spellcheck="false" formControlName="cuisine"  placeholder="Cuisine">
+            <span class="error" *ngIf="checkErrors('cuisine',addForm)">Cuisine can not be Empty</span>
+            </div>
+        </div>
+
+        <div style="display: flex;justify-content: space-between; width: 60%;">
+            <div style="display: flex;flex-direction: column;">
+                <input class="text-input" type="text" spellcheck="false" formControlName="description"  placeholder="Description">
+                <span class="error" *ngIf="checkErrors('description',addForm)">Description Name can not be Empty</span>
+            </div>
+
+            <div style="display: flex;flex-direction: column;">
+            <input class="text-input" type="text" spellcheck="false" formControlName="location"  placeholder="Location">
+            <span class="error" *ngIf="checkErrors('location',addForm)">Location can not be Empty</span>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: space-around; width: 60%; align-items: center;">
+        <div style="display: flex;justify-content: flex-start; width: 60%;margin-top: 30px;">
+            <div style="display: flex; justify-content: flex-start;align-items: center;">
+                <input class="check-input" checked="true" disabled="true" type="checkbox"> <span  style="margin-right: 20px;">Veg</span>
+            </div>
+            <div style="display: flex; justify-content: flex-start;align-items: center;">
+            <input class="check-input" type="checkbox" formControlName="nonveg"><span >Non Veg</span>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-start;align-items: center;
+    margin-top: 30px;">
+            <input class="check-input" type="checkbox" formControlName="bar"><span >BAR</span>
+            </div>
+        </div>
+        <div style="display: flex;flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 60%;
+        margin-top: 30px;">
+        <label for="dishes">Dishes <span style="color: rgb(129, 129, 129);text-decoration:underline;">(Please enter comma(,) separated Values)</span></label>
+        <textarea name="dishes" style="width: 100%;" formControlName="dishes" rows="8" placeholder="ex:- upma, rice, halwa,pasta,etc"></textarea>
+    </div>
+    <button [disabled]="addForm.invalid" [ngStyle]="{'background-color': addForm.invalid ? 'rgb(155, 155, 155)' : '#31b5ff'}" class="submit-button">Submit</button>
+    </form>
+</div>
